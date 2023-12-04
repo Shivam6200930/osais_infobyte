@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>shivam - Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/jpeg" href="RUP01411~2-01.jpeg" />
+</head>
+
+<body id="body">
+  <header>
+    <h1>Shivam Mandal</h1>
+
+    <div id="mySidepanel" class="sidepanel">
+      <nav>
+        <!--------------------------------------Navbar content-------------------------------------------------------------->
+        <ul>
+          <a  class="closebtn" onclick="closeNav()">&times;</a>
+          <li><a style="color:aliceblue  " href="#home" onclick="traget()">Home</a></li>
+          <li><a style="color:aliceblue  " href="#about" onclick="traget()">About</a></li>
+          <li><a style="color:aliceblue  " href="#contact" onclick="traget()">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button id="openbtn" onclick="openNav()">&#9776;</button>
+  </header>
+
+
+  <script>
+    let val=1
+    function openNav() {
+      if(val==1){
+      document.getElementById("mySidepanel").style.width = "250px";
+      val=0
+      }
+      else{
+        document.getElementById("mySidepanel").style.width = "0";
+        val=1
+      }
+      console.log(val)
+    }
+
+
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+       val=1  
+    }
+
+    function traget() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
+    
+      </script>
+
+
+  <!------------------------------------------home part code---------------------------------------------------------->
+  <section id="home">
+    <div class="h">
+      <h3><span style="color: rgb(33, 32, 33)">FULL STACK </span>DEVELOPER </h3>
+      <h1>&nbsp Hi, I am &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<br>
+        <span style="color: rgb(255, 0, 0)"> SHIVAM </span>MANDAL
+      </h1>
+
+    </div>
+    <img src="RUP01411~2-01.jpeg" height="400px" width="400px" alt="" srcset="">
+
+  </section>
+  <!-------------------------------------------About------------------------------------------------------------->
+  <section id="about">
+    <div class="img">
+      <img src="about.jpg" height="400px" width="400px" alt="about_image">
+      <div class="flex">
+        <h1>About Me</h1>
+        <h3> Hello Everyones! , I am shivam mandal. i am pursuing b.tech from narula institute of technology(NiT)<br>
+        </h3>
+        <div class="parent">
+          <div id="skills">
+            <h2>Skills</h2>
+          </div>
+          <div id="experience">
+            <h2>Experience</h2>
+          </div>
+          <div id="education">
+            <h2>Education</h2>
+          </div>
+        </div>
+        <div id="updated">
+
+        </div>
+      </div>
+    </div>
+    <script>
+      const skills = document.getElementById("skills");
+      const experience = document.getElementById("experience");
+      const education = document.getElementById("education");
+      const updated = document.getElementById("updated");
+      let flag = 0;
+      skills.addEventListener("click", () => {
+        updated.innerHTML = `             
+                    WEB DEVELOPER
+                    Full Stack Developer : HTML , CSS , JAVASCRIPRT , NODE JS , EXPRESS JS , MONGO DB , REACT  
+                `;
+
+      });
+      experience.addEventListener("click", () => {
+        updated.innerHTML = `
+                <div id="experience">
+                    <p>Here is my work experience:</p>
+                    <ul>
+                      <li>
+                          netflix_clone
+                        </li>
+                        <li> to-do list</li>
+                        <li>simon game</li>
+                        <li>Weather ftech </li>
+                      </ul>
+                    </div>`;
+      });
+
+      education.addEventListener("click", () => {
+        updated.innerHTML = `
+                
+                    NiT Agarpara college B.tech(AIML)
+                    <li>8.04 SCPA</li>
+                    standard X:
+                    <li>Scored 85 %</li>
+                    Standard X||:
+                    <li>Scored 70%</li>
+                `;
+      });
+    </script>
+  </section>
+  <!----------------------------------------------------------------contanct me ------------------------------>
+  <section id="contact">
+    <h1 style="text-align:center">Contact Me
+      <hr>
+    </h1>
+    <div class="container">
+      <div class="left">
+        <div class="ans">
+          <div class="leftf">
+            <div class="content">
+              <svg style="color: rgb(9, 6, 176)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+              </svg>
+              <h4>Address</h4>
+              <p>Kolkata shripally,<br>agarpara</p>
+            </div>
+            <div class="content">
+              <svg style="color: rgb(9, 6, 176)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg>
+              <h4>Phone</h4>
+              <p>6200874410</p>
+            </div>
+            <div class="content email">
+              <svg style="color: rgb(9, 6, 176)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path
+                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+              </svg>
+              <h4>Email</h4>
+              <p>mandalshivam962@gmail.com</p>
+            </div>
+          </div>
+          <div class="lefts">
+            <div class="vertical"></div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <h1>Send us a message</h1>
+        <p>if you have any work from me or any types of quires related to my tutorial.
+          you can send me message from here its my pleasure to help you.
+        </p>
+        <form action="" method="">
+          <input type="text" placeholder="Enter your Full Name"><br>
+          <input type="text" placeholder="Enter Your Email" required><br>
+          <input type="text" id="message" placeholder="Enter your message" required><br>
+          <button id="but" onclick="sucess()" type="submit">Send Now</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function sucess() {
+
+        document.getElementById("body").innerHTML = ` <h1 style=" font-weight:bold" "margin-top:"50%" ">Your Message send Successfully ✅<h1>  `
+        document.getElementById("body").style.textAlign = "center";
+        document.getElementById("body").style.marginTop = "20%";
+      }
+
+    </script>
+
+
+  </section>
+  <!--------------------------------------------------Footer----------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Shivam. All rights reserved.</p>
+      <svg style="margin-left:70%" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70px" height="70px"
+        viewBox="0,0,256,256">
+        <defs>
+          <radialGradient cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"
+            id="color-1_Xy10Jcu1L2Su_gr1">
+            <stop offset="0" stop-color="#ffdd55"></stop>
+            <stop offset="0.328" stop-color="#ff543f"></stop>
+            <stop offset="0.348" stop-color="#fc5245"></stop>
+            <stop offset="0.504" stop-color="#e64771"></stop>
+            <stop offset="0.643" stop-color="#d53e91"></stop>
+            <stop offset="0.761" stop-color="#cc39a4"></stop>
+            <stop offset="0.841" stop-color="#c837ab"></stop>
+          </radialGradient>
+          <radialGradient cx="11.786" cy="5.5403" r="29.813" gradientUnits="userSpaceOnUse"
+            id="color-2_Xy10Jcu1L2Su_gr2">
+            <stop offset="0" stop-color="#4168c9"></stop>
+            <stop offset="0.999" stop-color="#4168c9" stop-opacity="0"></stop>
+          </radialGradient>
+        </defs>
+        <g transform="translate(67.84,67.84) scale(0.47,0.47)">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <g transform="scale(5.33333,5.33333)">
+              <path
+                d="M34.017,41.99l-20,0.019c-4.4,0.004 -8.003,-3.592 -8.008,-7.992l-0.019,-20c-0.004,-4.4 3.592,-8.003 7.992,-8.008l20,-0.019c4.4,-0.004 8.003,3.592 8.008,7.992l0.019,20c0.005,4.401 -3.592,8.004 -7.992,8.008z"
+                fill="url(#color-1_Xy10Jcu1L2Su_gr1)"></path>
+              <path
+                d="M34.017,41.99l-20,0.019c-4.4,0.004 -8.003,-3.592 -8.008,-7.992l-0.019,-20c-0.004,-4.4 3.592,-8.003 7.992,-8.008l20,-0.019c4.4,-0.004 8.003,3.592 8.008,7.992l0.019,20c0.005,4.401 -3.592,8.004 -7.992,8.008z"
+                fill="url(#color-2_Xy10Jcu1L2Su_gr2)"></path>
+              <path
+                d="M24,31c-3.859,0 -7,-3.14 -7,-7c0,-3.86 3.141,-7 7,-7c3.859,0 7,3.14 7,7c0,3.86 -3.141,7 -7,7zM24,19c-2.757,0 -5,2.243 -5,5c0,2.757 2.243,5 5,5c2.757,0 5,-2.243 5,-5c0,-2.757 -2.243,-5 -5,-5z"
+                fill="#ffffff"></path>
+              <circle cx="31.5" cy="16.5" r="1.5" fill="#ffffff"></circle>
+              <path
+                d="M30,37h-12c-3.859,0 -7,-3.14 -7,-7v-12c0,-3.86 3.141,-7 7,-7h12c3.859,0 7,3.14 7,7v12c0,3.86 -3.141,7 -7,7zM18,13c-2.757,0 -5,2.243 -5,5v12c0,2.757 2.243,5 5,5h12c2.757,0 5,-2.243 5,-5v-12c0,-2.757 -2.243,-5 -5,-5z"
+                fill="#ffffff"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+      <svg style="margin-right:1%" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35px" height="35px"
+        viewBox="0 0 48 48">
+        <path fill="#03A9F4"
+          d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+        </path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 48 48">
+        <path fill="#0288D1"
+          d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
+        </path>
+        <path fill="#FFF"
+          d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
+        </path>
+      </svg>
+    </div>
+  </footer>
+</body>
+</html>
